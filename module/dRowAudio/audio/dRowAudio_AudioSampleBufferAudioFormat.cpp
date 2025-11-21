@@ -143,12 +143,7 @@ AudioFormatReader* AudioSampleBufferAudioFormat::createReaderFor (InputStream* s
     return nullptr;
 }
 
-AudioFormatWriter* AudioSampleBufferAudioFormat::createWriterFor (OutputStream* /*streamToWriteTo*/,
-                                                                  double /*sampleRateToUse*/,
-                                                                  unsigned int /*numberOfChannels*/,
-                                                                  int /*bitsPerSample*/,
-                                                                  const juce::StringPairArray& /*metadataValues*/,
-                                                                  int /*qualityOptionIndex*/)
+std::unique_ptr<juce::AudioFormatWriter> AudioSampleBufferAudioFormat::createWriterFor (std::unique_ptr<juce::OutputStream>&, const AudioFormatWriterOptions&)
 {
     jassertfalse; // not yet implemented!
     return nullptr;
