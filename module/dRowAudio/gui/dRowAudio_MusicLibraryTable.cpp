@@ -255,7 +255,7 @@ int MusicLibraryTable::getColumnAutoSizeWidth (int columnId)
         if (rowElement.isValid())
         {
             const juce::String text (rowElement[MusicColumns::columnNames[columnId]].toString());
-            widest = jmax (widest, font.getStringWidth (text));
+            widest = jmax (widest, juce::GlyphArrangement::getStringWidthInt (font, text));
         }
     }
 

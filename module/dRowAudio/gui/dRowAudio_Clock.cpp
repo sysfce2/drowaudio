@@ -36,7 +36,7 @@ Clock::Clock()
 
 int Clock::getRequiredWidth() const
 {
-    return getFont().getStringWidth (timeAsString) + 10;
+    return juce::GlyphArrangement::getStringWidthInt (getFont(), timeAsString) + 10;
 }
 
 void Clock::setTimeDisplayFormat (const int newFormat)

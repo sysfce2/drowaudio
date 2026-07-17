@@ -231,7 +231,7 @@ int BasicFileBrowser::getLongestWidth()
         Font temp (list->getRowHeight() * 0.7f);
         for (int i = 0; i < noFiles; ++i)
         {
-            int itemWidth = temp.getStringWidth (fileList->getFile(i).getFileName());
+            int itemWidth = juce::GlyphArrangement::getStringWidthInt (temp, fileList->getFile(i).getFileName());
             if (itemWidth >    stringWidth)
                 stringWidth = itemWidth;
         }
