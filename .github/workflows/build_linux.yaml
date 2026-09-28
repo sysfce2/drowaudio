@@ -15,4 +15,5 @@ jobs:
         with:
           name: Linux
           path: ci/linux/bin
+          retention-days: 3
 

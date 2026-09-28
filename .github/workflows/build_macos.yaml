@@ -15,4 +15,5 @@ jobs:
         with:
           name: Mac
           path: ci/mac/bin
+          retention-days: 3
 
